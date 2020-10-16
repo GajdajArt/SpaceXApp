@@ -1,14 +1,11 @@
 package com.example.spacexapp
 
-import android.util.Log
 import com.example.spacexapp.data.Callback
-import com.example.spacexapp.data.data.LoginData
-import com.example.spacexapp.data.data.LoginResultData
+import com.example.spacexapp.data.model.LoginData
+import com.example.spacexapp.data.model.LoginResultData
 import com.example.spacexapp.domain.LoginInteractor
 import com.example.spacexapp.domain.impl.LoginInteractorImpl
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).

@@ -1,11 +1,9 @@
 package com.example.spacexapp.data.impl;
 
-import android.util.Log;
-
 import com.example.spacexapp.data.Callback;
-import com.example.spacexapp.data.LoginRepository;
-import com.example.spacexapp.data.data.LoginData;
-import com.example.spacexapp.data.data.LoginResultData;
+import com.example.spacexapp.domain.repository.LoginRepository;
+import com.example.spacexapp.data.model.LoginData;
+import com.example.spacexapp.data.model.LoginResultData;
 
 public class MockLoginRepository implements LoginRepository {
 

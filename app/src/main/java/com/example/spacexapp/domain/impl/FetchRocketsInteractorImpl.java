@@ -1,8 +1,8 @@
 package com.example.spacexapp.domain.impl;
 
 import com.example.spacexapp.data.Callback;
-import com.example.spacexapp.data.SpaceXRepository;
-import com.example.spacexapp.data.data.RocketData;
+import com.example.spacexapp.domain.repository.SpaceXRepository;
+import com.example.spacexapp.data.model.RocketData;
 import com.example.spacexapp.data.impl.MockSpaceXRepository;
 import com.example.spacexapp.domain.FetchRocketsInteractor;
 

@@ -1,4 +1,4 @@
-package com.example.spacexapp.data.data;
+package com.example.spacexapp.data.model;
 
 public class LoginResultData {
 
