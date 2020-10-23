@@ -3,8 +3,7 @@ package com.example.spacexapp
 import com.example.spacexapp.data.Callback
 import com.example.spacexapp.data.model.LoginData
 import com.example.spacexapp.data.model.LoginResultData
-import com.example.spacexapp.domain.LoginInteractor
-import com.example.spacexapp.domain.impl.LoginInteractorImpl
+import com.example.spacexapp.domain.interactor.LoginInteractor
 import org.junit.Test
 
 /**
@@ -15,7 +14,8 @@ import org.junit.Test
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        val loginInteractor: LoginInteractor = LoginInteractorImpl()
+        val loginInteractor: LoginInteractor =
+            LoginInteractor()
 
         loginInteractor.login(LoginData("Admin", "12345"), object : Callback<LoginResultData> {
             override fun onSuccess(result: LoginResultData) {

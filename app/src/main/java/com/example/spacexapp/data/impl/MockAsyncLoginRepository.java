@@ -5,12 +5,9 @@ import com.example.spacexapp.domain.repository.LoginRepository;
 import com.example.spacexapp.data.model.LoginData;
 import com.example.spacexapp.data.model.LoginResultData;
 
-public class MockLoginRepository implements LoginRepository {
+public class MockAsyncLoginRepository implements LoginRepository {
 
-    private static final String LOGIN = "Admin";
-    private static final String PASSWORD = "12345";
-    private static final String TOKEN = "123456";
-    private static final String NAME = "Bob";
+    private static final Long MOCK_DELAY = 2000L;
 
     private Callback<LoginResultData> callback;
     private Thread backgroundThread;
@@ -36,14 +33,14 @@ public class MockLoginRepository implements LoginRepository {
         public void run() {
             //Иметируем задерку на 2 секунды призагрузке данных
             try {
-                Thread.sleep(2000L);
+                Thread.sleep(MOCK_DELAY);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
             //Имитируем ошибку
             if (isError()) {
-                callback.onError("Oops, looser =P");
+                callback.onError(OOPS_ERROR_MESSAGE);
                 return;
             }
 
@@ -51,7 +48,7 @@ public class MockLoginRepository implements LoginRepository {
             if (loginData.getLogin().equals(LOGIN) && loginData.getPassword().equals(PASSWORD)) {
                 callback.onSuccess(new LoginResultData(TOKEN, NAME));
             } else  {
-                callback.onError("Wrong login or password");
+                callback.onError(WRONG_PASSWORD_ERROR_MESSAGE);
             }
         }
 

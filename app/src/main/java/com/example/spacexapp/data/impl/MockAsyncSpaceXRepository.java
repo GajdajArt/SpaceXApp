@@ -7,7 +7,7 @@ import com.example.spacexapp.data.model.RocketData;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MockSpaceXRepository implements SpaceXRepository {
+public class MockAsyncSpaceXRepository implements SpaceXRepository {
 
     private Callback<List<RocketData>> callback;
     private Thread backgroundThread;
